@@ -1,5 +1,5 @@
 ---
-name: troubleshoot
+name: __meridian-troubleshoot
 description: "Diagnostic and troubleshooting guide for meridian problems. Use when spawns fail unexpectedly, state seems corrupt, the CLI behaves strangely, or you need to run `meridian doctor`. Covers common failure patterns, state recovery, log inspection, and systematic debugging methodology."
 ---
 

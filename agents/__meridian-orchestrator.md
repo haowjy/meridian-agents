@@ -5,6 +5,7 @@ model: claude-opus-4-6
 skills:
   - __meridian-orchestrate
   - __meridian-spawn-agent
+  - __meridian-work-coordination
 # mcp-tools: [spawn_create, spawn_list, spawn_show, spawn_wait, spawn_continue, spawn_stats, skills_list, skills_show, models_list, models_show, doctor]
 sandbox: unrestricted
 ---

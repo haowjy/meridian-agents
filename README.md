@@ -1,38 +1,53 @@
-# meridian-agents
+# meridian-base
 
-External agent and skill content for Meridian.
+Non-opinionated core agents and skills for Meridian. Teaches the harness how to use meridian — spawning, orchestrating, work coordination, install management, and troubleshooting.
+
+This is what Meridian bootstraps by default.
 
 ## Layout
 
-- `agents/*.md`: installable agent profiles
-- `skills/*/SKILL.md`: installable skills
+- `agents/*.md` — installable agent profiles
+- `skills/*/SKILL.md` — installable skills (with optional `resources/`)
 
-Meridian discovers this repo by layout only. No source manifest is required.
+Meridian discovers this repo by layout convention. No source manifest is required inside the repo itself.
 
-## Core Bootstrap Set
+## Contents
 
-These files are the minimal bootstrap content Meridian needs to auto-install on demand:
+### Agents (2)
 
-- `agents/__meridian-orchestrator.md`
-- `agents/__meridian-subagent.md`
-- `skills/__meridian-orchestrate/SKILL.md`
-- `skills/__meridian-spawn-agent/SKILL.md`
+| Agent | Model | Purpose |
+|---|---|---|
+| `__meridian-orchestrator` | opus | Multi-step orchestrator with work coordination |
+| `__meridian-subagent` | (default) | Default execution agent for scoped tasks |
 
-## Optional Workflow Content
+### Skills (5)
 
-This repo also carries the richer development workflow content used by Meridian itself, including:
+| Skill | Purpose |
+|---|---|
+| `__meridian-orchestrate` | Supervisor methodology — planning, delegation, review cycles, model selection |
+| `__meridian-spawn-agent` | CLI reference for `meridian spawn`, work items, parallel execution |
+| `__meridian-work-coordination` | Work item lifecycle, artifact placement, status management |
+| `__meridian-install` | Managed install system — syncing agents/skills from external sources |
+| `__meridian-troubleshoot` | Diagnostics, common failure patterns, state recovery |
 
-- `dev-orchestrator`
-- `coder`
-- `reviewer*`
-- `unit-tester`
-- `smoke-tester`
-- `documenter`
-- `dev-workflow`
-- `reviewing`
-- `issue-tracking`
-- `design`
-- `plan-implementation`
-- `work-coordination`
+## Bootstrap
 
-The current content is intentionally practical first. Names, prompts, and skill boundaries can be recalibrated after the default bootstrap path is working end to end.
+Meridian auto-installs `__meridian-orchestrator` and `__meridian-subagent` (plus their skill dependencies) when they're missing locally. This repo is the well-known bootstrap source — if no other provenance is found, Meridian adds it to `agents.toml` automatically.
+
+## Install
+
+```bash
+meridian install @haowjy/meridian-base
+```
+
+Or selectively:
+
+```bash
+meridian install @haowjy/meridian-base --agents __meridian-orchestrator
+# skill deps auto-resolved from agent frontmatter
+```
+
+## See Also
+
+- [meridian-channel](https://github.com/haowjy/meridian-channel) — the Meridian coordination engine
+- [meridian-dev-workflow](https://github.com/haowjy/meridian-dev-workflow) — opinionated SDLC methodology built on top of this base

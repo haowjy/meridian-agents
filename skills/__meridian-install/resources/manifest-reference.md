@@ -76,7 +76,7 @@ kind = "git"
 url = "https://github.com/haowjy/meridian-base.git"
 ref = "main"
 agents = ["__meridian-orchestrator", "__meridian-subagent"]
-skills = ["__meridian-orchestrate", "__meridian-spawn-agent", "install"]
+skills = ["__meridian-orchestrate", "__meridian-spawn-agent", "__meridian-install"]
 
 # Team-shared agents pinned to a release tag.
 [[sources]]

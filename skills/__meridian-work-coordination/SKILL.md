@@ -1,5 +1,5 @@
 ---
-name: work-coordination
+name: __meridian-work-coordination
 description: Meridian work lifecycle and artifact placement for orchestrators. Use this whenever you need to create, switch, update, or complete a work item, or decide where work-scoped notes versus broader shared docs belong.
 ---
 
