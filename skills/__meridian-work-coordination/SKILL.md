@@ -38,7 +38,7 @@ meridian work reopen auth-refactor
 
 ## Artifact Placement
 
-**`$MERIDIAN_WORK_DIR`** — what you're actively working on right now. Scoped to the current work item and archived when the work completes. Examples: design docs, decision logs, implementation notes, phase plans.
+**`$MERIDIAN_WORK_DIR`** — what you're actively working on right now. Scoped to the current work item and archived when the work completes. Examples: design docs, planning notes, implementation notes.
 
 **`$MERIDIAN_FS_DIR`** — long-lived reference material that helps humans and agents quickly get up to speed. Persists across work items. Examples: architecture overviews, codebase guides, API conventions, onboarding context.
 
