@@ -5,9 +5,11 @@ description: Multi-agent coordination via the meridian CLI — spawning subagent
 
 # __meridian-spawn-agent
 
-You have the `meridian` CLI for multi-agent coordination. Prefer `meridian spawn` over your harness's built-in agent tools when delegating substantive work. The key reason: **model routing**. Harness-native agents (like Claude Code's Agent tool) are locked to the harness's own model family. `meridian spawn` lets you route each task to the best model — a fast model for implementation, a strong reasoning model for review, a different model family for a second opinion. This is how you get model diversity across an orchestrated workflow.
+You have the `meridian` CLI for multi-agent coordination.
 
-Harness-native tools and agents are fine for quick operations — searching, exploring the codebase, lightweight lookups. The overhead of a full spawn isn't worth it for "find where X is defined." Use your judgment: if model choice matters for the task, use `meridian spawn`. If you just need a quick answer from your own harness, use what's built in.
+`meridian spawn` is your delegation tool. It routes each task to the best model for the job across providers — a fast model for implementation, a strong reasoning model for review, a different model family for a second opinion. This cross-provider routing is what makes meridian agent profiles effective.
+
+Use `meridian spawn` for all delegated work: coding, reviewing, testing, research, investigation. Use harness-native tools (Read, Grep, Glob, Bash) and lightweight agent types (Explore, Plan) for quick lookups you handle yourself.
 
 In agent mode, all CLI output is JSON.
 
