@@ -4,6 +4,14 @@ Be brief. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Vers
 
 ## [Unreleased]
 
+### Added
+- `kimi` and `grok` model aliases for Kimi K3 and Grok 4.5, using bare model
+  IDs so Mars resolves their providers through harness discovery.
+
+### Changed
+- Documented the package convention that model aliases omit providers unless an
+  unresolved model-ID collision requires one.
+
 ## [0.10.2] - 2026-07-29
 
 ## [0.10.1] - 2026-07-29

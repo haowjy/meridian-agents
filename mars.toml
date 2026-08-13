@@ -79,6 +79,18 @@ default_effort = "high"
 model = "opencode-go/glm-5.2"
 provider = "opencode-go"
 
+[models.kimi]
+harness = "opencode"
+description = "Long-context multimodal agentic model for coding, research, and orchestration."
+default_effort = "high"
+model = "kimi-k3"
+
+[models.grok]
+harness = "opencode"
+description = "General-purpose reasoning and coding model available through OpenCode."
+default_effort = "high"
+model = "grok-4.5"
+
 [models.gptmini]
 description = "Fast and cheap. Good for bulk exploration and simple tasks. Value 9, intelligence 5, taste 3."
 default_effort = "high"
