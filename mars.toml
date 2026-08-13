@@ -81,7 +81,7 @@ provider = "opencode-go"
 
 [models.kimi]
 harness = "opencode"
-description = "Long-context multimodal agentic model for coding, research, and orchestration."
+description = "Strong at long-running coding and research over large inputs. Slow and token-heavy; avoid bulk work. Value 4, intelligence 8, taste 6."
 default_effort = "high"
 model = "kimi-k3"
 
