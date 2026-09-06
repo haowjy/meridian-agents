@@ -4,6 +4,13 @@ Be brief. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Vers
 
 ## [Unreleased]
 
+### Added
+- `astra` model alias for GPT-6 Astra.
+
+### Changed
+- The `gpt` alias now tracks the default GPT-6 model family and currently
+  resolves to GPT-6 Astra.
+
 ## [0.10.5] - 2026-08-17
 
 ## [0.10.4] - 2026-08-13

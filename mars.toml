@@ -123,10 +123,16 @@ prompting = "Outcome-first executor. Include the north-star goal, success criter
 default_effort = "low"
 model = "gpt-5.6-sol"
 
-[models.gpt]
-description = "Strong coding model family. Prefer as leaf models that do not orchestrate."
+[models.astra]
+harness = "codex"
+description = "GPT-6 Astra."
 default_effort = "high"
-match = ["gpt-5*"]
+model = "gpt-6-astra"
+
+[models.gpt]
+description = "Default GPT-6 model family."
+default_effort = "high"
+match = ["gpt-6*"]
 exclude = [
     "*codex*",
     "*-pro",
